@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" alt="Company Logo">
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <img src="img/menu.png" alt="">
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="social-icons">
+                <img src="img/instagram.png" alt="Link to instagram">
+                <img src="img/facebook.png" alt="link to facebook">
+                <img src="img/twitter.png" alt="link to twitter">
+                <img src="img/youtube.png" alt="link to youtube">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <img src="img/search.png" alt="magnifying glass for search bar">
+            </div>
+        </div>
+        <img src="img/cloud.png" id="clouds" alt="clouds in background of webpage">
+        <img src="img/plane.png" id="plane" alt="airplane flying in background of webpage">
+        <div id="hotairballoon">
+            <img src="img/balloon.png" alt="hot air balloon" class="bal1">
+            <img src="img/balloon.png" alt="hot air balloon" class="bal2">
+            <img src="img/balloon.png" alt="hot air balloon" class="bal3">
+        </div>
+        <img src="img/pause.png" alt="Pause button" id="myImg">
+    </div>
+
+    <script>
+        var myImg = document.getElementById("myImg");
+        myImg.onclick = function(){
+            if(clouds.style.webkitAnimationPlayState == "paused"){
+                clouds.style.webkitAnimationPlayState = "running";
+                plane.style.webkitAnimationPlayState = "running";
+                hotairballoon.style.webkitAnimationPlayState = "running";
+                myImg.src = 'img/pause.png';
+            } else {
+                clouds.style.webkitAnimationPlayState = "paused";
+                plane.style.webkitAnimationPlayState = "paused";
+                hotairballoon.style.webkitAnimationPlayState = "paused";
+                myImg.src = 'img/play.png';
+            }
+        }
+    </script>
+</body>
+</html>
